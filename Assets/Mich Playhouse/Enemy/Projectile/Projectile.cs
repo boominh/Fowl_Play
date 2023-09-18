@@ -8,19 +8,20 @@ public class Projectile : MonoBehaviour
 {
     GameObject target;
     public float projectileSpeed;
+    Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Player");
+        
+        direction = target.transform.position - transform.position;
+        direction.Normalize();
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 direction = target.transform.position - transform.position;
-        direction.Normalize();
-
-        gameObject.transform.position += direction * projectileSpeed *Time.deltaTime;
+        gameObject.transform.position += direction * projectileSpeed * Time.deltaTime;
     }
 }

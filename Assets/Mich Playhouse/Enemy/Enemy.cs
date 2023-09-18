@@ -32,7 +32,7 @@ public class Enemy : MonoBehaviour
         randomY = Random.Range(-height + 1, height - 1);
         shootingPosition = new Vector3(randomX, randomY); //insideunitcirle letur
         
-        fireTimer = fireRate;
+        fireTimer = fireRate; //enables duck to fire as soon as shootingPosition is reached
     }
     void Update()
     {
