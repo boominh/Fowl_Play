@@ -6,9 +6,9 @@ public class DuckMovement : MonoBehaviour
 {
 
     Rigidbody2D rb2D;
-    public float duckMaxSpeed = 4f;
-    public float acceleration = 15;
-    public float deacceleration = 6;
+    public float duckMaxSpeed = 2.5f;
+    public float acceleration = 11;
+    public float deacceleration = 7;
 
     Vector2 userInput;
     Vector2 velocity;
@@ -38,7 +38,7 @@ public class DuckMovement : MonoBehaviour
 
         if( velocity.sqrMagnitude > duckMaxSpeed * duckMaxSpeed) { velocity.Normalize(); velocity *= duckMaxSpeed; }
 
-        if (velocity.sqrMagnitude == 0) { velocity *= 0.9f - deacceleration; }
+        if (velocity.sqrMagnitude == 0) { velocity *= 2f - deacceleration; }
 
         duckPosition += velocity;
 
