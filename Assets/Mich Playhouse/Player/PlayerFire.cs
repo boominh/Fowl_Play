@@ -1,23 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class PlayerFire : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject reflectPrefab;
 
-    // Update is called once per frame
+    float timer;
+    float fireRate = 1f;
     void Update()
     {
+        // Vector between mouse and player
+        Vector2 direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
         
-    }
+        // Make reflect
+        if (Input.GetMouseButton(0) && timer > fireRate)
+        {
+            transform.right = direction;
+            fire();
+            transform.up = Vector2.up;
+            timer = 0;
+        }
 
+        timer += Time.deltaTime;
+    }
+    // Make spawn
     public void fire()
     {
-
+        Instantiate(reflectPrefab, transform.position, transform.rotation);
     }
 }
+
