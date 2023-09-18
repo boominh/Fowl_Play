@@ -19,12 +19,13 @@ public class DuckMovement : MonoBehaviour
     {
 
         rb2D = GetComponent<Rigidbody2D>();
-
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        velocity = userInput * duckMaxSpeed;
 
         userInput.x = Input.GetAxisRaw("Horizontal");
         userInput.y = Input.GetAxisRaw("Vertical");
@@ -40,9 +41,13 @@ public class DuckMovement : MonoBehaviour
 
         if (velocity.sqrMagnitude == 0) { velocity *= 2f - deacceleration; }
 
-        duckPosition += velocity;
+        duckPosition += rb2D.velocity;
 
         rb2D.velocity = velocity;
+
+        
+
+
 
 
 
