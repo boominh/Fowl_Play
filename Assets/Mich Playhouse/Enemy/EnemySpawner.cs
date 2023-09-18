@@ -6,26 +6,40 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject enemyPrefab;
 
-    public int maxEnemies = 4;
+    int maxEnemies = 6;
     int currentEnemies = 0;
-    
+
     float width;
     float height;
     float timer;
-    float spawnRate;
+    float spawnRate = 1f;
 
-    
+    Vector3 randomSpawnPosition;
+
+
     // Start is called before the first frame update
     void Start()
     {
         width = Camera.main.orthographicSize * Camera.main.aspect;
         height = Camera.main.orthographicSize;
-
-        SpawnEnemy();
     }
 
-    public void SpawnEnemy()
+    void Update()
     {
-        Instantiate(enemyPrefab, new Vector3(width, Random.Range(0, height)), transform.rotation);
+        if (timer > spawnRate && currentEnemies < maxEnemies)
+        {
+            SpawnEnemy();
+            timer = 0;
+            currentEnemies++;
+        }
+
+        timer += Time.deltaTime;
+
+        randomSpawnPosition = new Vector3(width, Random.Range(-height, height));
+
+        void SpawnEnemy()
+        {
+            Instantiate(enemyPrefab, randomSpawnPosition, transform.rotation);
+        }
     }
 }

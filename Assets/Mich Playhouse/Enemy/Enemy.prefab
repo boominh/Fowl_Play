@@ -79,7 +79,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 2}
+  m_Size: {x: 0.16, y: 0.16}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -97,5 +97,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dc55f0888a01f746b1c937ba7f9f14a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 2
   projectile: {fileID: 5458677859493201884, guid: 107bc8b7b0158fe45b48f403005d665c, type: 3}
+  fireRate: 5
