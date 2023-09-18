@@ -6,7 +6,7 @@ public class DuckMovement : MonoBehaviour
 {
 
     Rigidbody2D rb2D;
-    public float duckMaxSpeed = 2.5f;
+    public float duckMaxSpeed = 3.5f;
     public float acceleration = 11;
     public float deacceleration = 7;
 
@@ -30,27 +30,14 @@ public class DuckMovement : MonoBehaviour
         userInput.x = Input.GetAxisRaw("Horizontal");
         userInput.y = Input.GetAxisRaw("Vertical");
 
-        
-           
-        if (userInput.sqrMagnitude > duckMaxSpeed ) {userInput.Normalize();}
-      
+        //velocity += userInput * acceleration;
 
-        velocity += userInput * acceleration;
+        //if( velocity.sqrMagnitude > duckMaxSpeed * duckMaxSpeed) { velocity.Normalize(); velocity *= duckMaxSpeed; }
 
-        if( velocity.sqrMagnitude > duckMaxSpeed * duckMaxSpeed) { velocity.Normalize(); velocity *= duckMaxSpeed; }
+        //if (userInput.sqrMagnitude == 0) { velocity *= 2f - deacceleration; }
 
-        if (velocity.sqrMagnitude == 0) { velocity *= 2f - deacceleration; }
-
-        duckPosition += rb2D.velocity;
+        //duckPosition += rb2D.velocity;
 
         rb2D.velocity = velocity;
-
-        
-
-
-
-
-
-
     }
 }
