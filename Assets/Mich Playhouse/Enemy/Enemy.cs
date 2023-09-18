@@ -12,22 +12,26 @@ public class Enemy : MonoBehaviour
     float width;
     float height;
     float fireTimer;
-    float walkTimer;
+    float elapsedTime;
     public float fireRate;
+    
 
     bool startBlasting = false;
     Vector3 shootingPosition;
+    Vector3 startingPosition;
     //Vector3 movementVector;
 
     void Start()
     {
+        startingPosition = transform.position;
+      
         width = Camera.main.orthographicSize * Camera.main.aspect;
         height = Camera.main.orthographicSize;
 
         randomX = Random.Range(width/2, width);
         randomY = Random.Range(-height + 1, height - 1);
         shootingPosition = new Vector3(randomX, randomY); //insideunitcirle letur
-
+        
         fireTimer = fireRate;
     }
     void Update()
@@ -40,19 +44,18 @@ public class Enemy : MonoBehaviour
 
         if (transform.position != shootingPosition)
         {
-            float elapsedTime = Time.deltaTime;
+            elapsedTime += Time.deltaTime;
             float t = Mathf.Clamp01(elapsedTime / walkDuration);
 
-            Vector3 newPosition = Vector3.Lerp(transform.position, shootingPosition, t);
+            Vector3 newPosition = Vector3.Lerp(startingPosition, shootingPosition, t);
             transform.position = newPosition;
         }
 
-        if (walkTimer >= walkDuration)
+        if (transform.position == shootingPosition)
         {
             startBlasting = true;
         }
 
         fireTimer += Time.deltaTime;
-        walkTimer += Time.deltaTime;
     }
 }
