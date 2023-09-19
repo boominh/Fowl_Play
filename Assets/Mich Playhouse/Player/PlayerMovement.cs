@@ -7,8 +7,6 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody2D rb2D;
     public float duckMaxSpeed = 6f;
-    public float acceleration = 11f;
-    public float deacceleration = 7f;
 
     Vector2 userInput;
     Vector2 velocity;
