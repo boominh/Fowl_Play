@@ -9,6 +9,7 @@ public class PlayerFire : MonoBehaviour
 
     float timer;
     float fireRate = 0.3f;
+
     void Update()
     {
         // Vector between mouse and player
@@ -26,7 +27,7 @@ public class PlayerFire : MonoBehaviour
         timer += Time.deltaTime;
     }
     // Make spawn
-    public void fire()
+    void fire()
     {
         Instantiate(reflectPrefab, transform.position, transform.rotation);
     }

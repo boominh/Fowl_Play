@@ -6,7 +6,8 @@ using UnityEngine.UIElements;
 
 public class ReflectEDProjectile : MonoBehaviour
 {
-    public float projectileSpeed = 7f;
+    float projectileSpeed = 15f;
+    float spinSpeed = 360 * 5;
     
     public GameObject explosion;
     public GameObject bloodPuddle;
@@ -33,6 +34,7 @@ public class ReflectEDProjectile : MonoBehaviour
     {
         // Maketh movink
         gameObject.transform.position += direction * projectileSpeed * Time.deltaTime;
+        gameObject.transform.Rotate(0, 0, spinSpeed * Time.deltaTime);
 
         // Destroys projectile if out of frame
         position = transform.position;

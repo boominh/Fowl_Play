@@ -33,6 +33,7 @@ public class EnemyProjectile : MonoBehaviour
     {
         // Maketh movink
         gameObject.transform.position += direction * projectileSpeed * Time.deltaTime;
+        gameObject.transform.Rotate(0, 0, 360 * Time.deltaTime);
 
         // Destroys projectile if out of frame
         position = transform.position;
