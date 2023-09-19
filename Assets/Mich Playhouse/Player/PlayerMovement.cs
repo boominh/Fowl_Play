@@ -24,7 +24,7 @@ public class PlayerMovement : MonoBehaviour
     {
         userInput.x = Input.GetAxisRaw("Horizontal");
         userInput.y = Input.GetAxisRaw("Vertical");
-        userInput.Normalize()
+        userInput.Normalize();
 
         velocity = userInput * duckMaxSpeed;
 
