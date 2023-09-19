@@ -5,7 +5,7 @@ using UnityEngine;
 public class ReflectProjectile : MonoBehaviour
 {
     public float selfDestructTimer = 0.3f;
-    public float speed = 1f;
+    public float speed = 0.5f;
 
     Vector3 moveForward;
 

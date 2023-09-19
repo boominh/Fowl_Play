@@ -8,7 +8,7 @@ public class PlayerFire : MonoBehaviour
     public GameObject reflectPrefab;
 
     float timer;
-    float fireRate = 1f;
+    float fireRate = 0.3f;
     void Update()
     {
         // Vector between mouse and player

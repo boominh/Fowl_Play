@@ -46,7 +46,6 @@ public class EnemyProjectile : MonoBehaviour
         {
             Instantiate(reflectEDProjectile, transform.position, Quaternion.identity);
             Destroy(gameObject);
-            print("crash with reflector");
         }
 
         // Collision with player

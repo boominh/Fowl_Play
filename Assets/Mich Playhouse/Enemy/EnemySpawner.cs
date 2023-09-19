@@ -12,7 +12,7 @@ public class EnemySpawner : MonoBehaviour
     float width;
     float height;
     float timer;
-    float spawnRate = 1f;
+    float spawnRate = 1.2f;
 
     Vector3 randomSpawnPosition;
 
@@ -41,5 +41,9 @@ public class EnemySpawner : MonoBehaviour
         {
             Instantiate(enemyPrefab, randomSpawnPosition, transform.rotation);
         }
+    }
+    public void Enemydied()
+    {
+        currentEnemies--;
     }
 }

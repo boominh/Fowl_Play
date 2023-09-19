@@ -9,12 +9,16 @@ public class ReflectEDProjectile : MonoBehaviour
     public float projectileSpeed = 7f;
     
     public GameObject explosion;
+    public GameObject bloodPuddle;
     
     Vector3 direction;
     Vector3 position;
 
     float width;
     float height;
+
+    Vector3 duckPosition;
+    quaternion duckRotation;
 
     void Start()
     {
@@ -40,13 +44,30 @@ public class ReflectEDProjectile : MonoBehaviour
     {
         if (other.gameObject.GetComponent<Enemy>() != null)
         {
-            Vector3 duckPosition = other.gameObject.transform.position;
-            quaternion duckRotation = other.gameObject.transform.rotation;
+            duckPosition = other.gameObject.transform.position;
+            duckRotation = other.gameObject.transform.rotation;
             Destroy(other.gameObject);
 
-            Instantiate(explosion, duckPosition, duckRotation);
+            Invoke("MakeExplode", 0f);
+            Invoke("MakePuddle", 0.4f);
+            
+            FindObjectOfType<EnemySpawner>().Enemydied();
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
+    void MakePuddle()
+    {
+        GameObject newPuddle = Instantiate(bloodPuddle, duckPosition, duckRotation);
+        Destroy(newPuddle, 1.5f);
+    }
+    void MakeExplode()
+    {
+        GameObject newExplosion = Instantiate(explosion, duckPosition, duckRotation);
+        Destroy(newExplosion, 1);
+    }
+    //void MakeDie()
+    //{
+    //    Destroy(gameObject);
+    //} 
 }

@@ -750,8 +750,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1393631106}
   - component: {fileID: 1393631105}
-  - component: {fileID: 1393631107}
+  - component: {fileID: 1393631109}
+  - component: {fileID: 1393631110}
   - component: {fileID: 1393631108}
+  - component: {fileID: 1393631111}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -802,7 +804,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: bc8cce9cf1d49594db11abb0d5096048, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -826,21 +828,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1393631107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1393631104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99aac9bf1210e4e4c8e6a0ef8cc498b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duckMaxSpeed: 2.5
-  acceleration: 11
-  deacceleration: 7
 --- !u!50 &1393631108
 Rigidbody2D:
   serializedVersion: 4
@@ -868,6 +855,53 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1393631109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393631104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea7334a92fe77a479f06012fc453943, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reflectPrefab: {fileID: 4442607752416685516, guid: 5182deca421086a46a0649e7e84f8a61, type: 3}
+--- !u!114 &1393631110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393631104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed5abdc1fcff47f40aaf1779949a82c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duckMaxSpeed: 6
+--- !u!95 &1393631111
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393631104}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3430ad9c0594f7a4db9cbab2dbf0b620, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1433542963
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +955,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0aa774c0d8af56842a713f5dec10c283, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
