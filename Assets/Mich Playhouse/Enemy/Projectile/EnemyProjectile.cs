@@ -10,6 +10,8 @@ public class EnemyProjectile : MonoBehaviour
 {
     public float projectileSpeed;
 
+    public GameObject reflectEDProjectile;
+
     GameObject target;
     Vector3 direction;
     Vector3 position;
@@ -29,6 +31,7 @@ public class EnemyProjectile : MonoBehaviour
     }
     void Update()
     {
+        // Maketh movink
         gameObject.transform.position += direction * projectileSpeed * Time.deltaTime;
 
         // Destroys projectile if out of frame
@@ -41,7 +44,8 @@ public class EnemyProjectile : MonoBehaviour
         // Collision with reflector
         if (other.gameObject.GetComponent<ReflectProjectile>() != null)
         {
-            direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+            Instantiate(reflectEDProjectile, transform.position, Quaternion.identity);
+            Destroy(gameObject);
             print("crash with reflector");
         }
 
@@ -52,11 +56,11 @@ public class EnemyProjectile : MonoBehaviour
             //FindObjectOfType<SceneHandler>().GoEndScreen();
         }
 
-        // Collision with enemy
+        /*Collision with enemy
         if (other.gameObject.GetComponent<Enemy>() != null)
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
-        }
+        }*/
     }
 }
