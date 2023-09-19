@@ -12,9 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: New Animated Tile
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 467031061, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  - {fileID: -1575178346, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  - {fileID: 896609056, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  - {fileID: 1852187408, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  - {fileID: 255630494, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  - {fileID: -957298351, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  - {fileID: 597694434, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  - {fileID: 1211337482, guid: 2681427cc6b93054f9f39ef6fe669bd1, type: 3}
+  m_MinSpeed: 8
+  m_MaxSpeed: 8
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
