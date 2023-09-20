@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     float timer;
     float spawnRate = 1.2f;
 
+
     Vector3 randomSpawnPosition;
 
 
