@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class ReflectEDProjectile : MonoBehaviour
 {
-    float projectileSpeed = 15f;
+    public float projectileSpeed = 15f;
     float spinSpeed = 360 * 5;
     
     public GameObject explosion;
@@ -44,7 +44,8 @@ public class ReflectEDProjectile : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<Enemy>() != null)
+        if (other.gameObject.GetComponent<Enemy>() != null || 
+            other.gameObject.GetComponent<Enemy_02>() != null)
         {
             duckPosition = other.gameObject.transform.position;
             duckRotation = other.gameObject.transform.rotation;

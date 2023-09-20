@@ -6,11 +6,9 @@ using UnityEngine;
 // Collision with Player, reflector and enemies
 // Destroyed if out of frame
 
-public class EnemyProjectile : MonoBehaviour
+public class UnblockableProjectile : MonoBehaviour
 {
     public float projectileSpeed;
-
-    public GameObject reflectEDProjectile;
 
     GameObject target;
     Vector3 direction;
@@ -25,7 +23,7 @@ public class EnemyProjectile : MonoBehaviour
         height = Camera.main.orthographicSize;
 
         target = GameObject.FindGameObjectWithTag("Player");
-        
+
         direction = target.transform.position - transform.position;
         direction.Normalize();
     }
@@ -37,22 +35,14 @@ public class EnemyProjectile : MonoBehaviour
 
         // Destroys projectile if out of frame
         position = transform.position;
-        if (position.x <= -width || position.x >= width)  {Destroy(gameObject);}
-        if (position.y <= -height|| position.y >= height) {Destroy(gameObject);}
+        if (position.x <= -width || position.x >= width) { Destroy(gameObject); }
+        if (position.y <= -height || position.y >= height) { Destroy(gameObject); }
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        // Collision with reflector
-        if (other.gameObject.GetComponent<ReflectProjectile>() != null)
-        {
-            Instantiate(reflectEDProjectile, transform.position, Quaternion.identity);
-            Destroy(gameObject);
-        }
-
         // Collision with player
         if (other.gameObject == target)
         {
-            print("player ouchie");
             GameObject.FindObjectOfType<HealthManager>().PlayerOuchie();
             Destroy(gameObject);
         }
