@@ -6,7 +6,6 @@ public class ReflectProjectile : MonoBehaviour
 {
     float distanceFromPlayer = 0.75f;
     float selfDestructTimer = 0.3f;
-    float speed = 2f;
 
     Vector3 moveForward;
 

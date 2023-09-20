@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public GameObject projectile;
 
-    float walkDuration = 0.5f;
+    float walkDuration;
 
     float randomX;
     float randomY;
@@ -34,7 +34,10 @@ public class Enemy : MonoBehaviour
         shootingPosition = new Vector3(randomX, randomY); // Optimize with insideunitcircle later
 
         //enables duck to fire as soon as shootingPosition is reached
-        fireTimer = fireRate; 
+        fireTimer = fireRate;
+
+        //randomize
+        walkDuration = Random.Range(0.5f, 1f);
     }
     void Update()
     {
@@ -43,6 +46,7 @@ public class Enemy : MonoBehaviour
         {
             fireTimer = 0;
             Instantiate(projectile, transform.position, transform.rotation);
+            fireRate = Random.Range(2, 6);
         }
 
         // Make walk to position

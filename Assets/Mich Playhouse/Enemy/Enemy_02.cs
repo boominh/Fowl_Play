@@ -38,6 +38,9 @@ public class Enemy_02 : MonoBehaviour
 
         //enables duck to fire as soon as shootingPosition is reached
         fireTimer = fireRate;
+
+        //randomize
+        walkDuration = Random.Range(0.5f, 1f);
     }
     void Update()
     {
@@ -45,12 +48,12 @@ public class Enemy_02 : MonoBehaviour
         if (fireTimer > fireRate && startBlasting)
         {
             fireTimer = 0;
+            fireRate = Random.Range(2, 6);
 
-            if (Random.Range(0, 2) == 0)
+            if (Random.Range(0, 3) == 0)
             {
                 Instantiate(unblockableProjectile, transform.position, transform.rotation);
             }
-
             else
             {
                 Instantiate(projectile, transform.position, transform.rotation);
