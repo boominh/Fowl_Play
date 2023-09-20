@@ -4,25 +4,17 @@ using UnityEngine;
 
 public class Bobbing : MonoBehaviour
 {
-    float anchorY;
-    float frequency = 1;
-    float amplitude = 1 / 2;
+    float frequency = 5;
+    float amplitude = 0.05f;
+
     float timer;
 
     // Update is called once per frame
     void Update()
-    {
-        float posX = transform.position.x;
-        float posY = transform.position.y;
-        float posZ = transform.position.z;
+    { 
+        float posY = Mathf.Sin(timer*frequency) * amplitude;
 
-        anchorY = posY + 1;
+        transform.localPosition =  new Vector2 (0, posY);
         timer += Time.deltaTime;
-
-        posY = anchorY + Mathf.Sin(timer*frequency) * amplitude;
-
-        print(posY);
-
-        gameObject.transform.position =  new Vector3 ( posX, posY, posZ);
     }
 }
