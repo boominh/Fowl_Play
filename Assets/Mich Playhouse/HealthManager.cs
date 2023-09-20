@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour
 {
     float playerHealth = 3;
-    float ducklingsHealth;
-    float mommaHealth;
+    float ducklingsHealth = 15;
+    float mommaHealth = 15;
 
     float playerHPstart;
     float ducklingsHPstart;
@@ -36,10 +36,10 @@ public class HealthManager : MonoBehaviour
     public void PlayerOuchie()
     {
         playerHealth -= 1;
-        if (playerHealth <= 0) 
-        {
-            //whatever happens when die
-        }
+        //if (playerHealth <= 0) 
+        //{
+            
+        //}
     }
 
     public void DucklingOuchie()

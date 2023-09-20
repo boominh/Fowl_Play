@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec984ee4b3ee38c48b730a4b94cb2ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectileSpeed: 15
   explosion: {fileID: 3613953447553265958, guid: 3423dff731f962a499ae77847264612c, type: 3}
   bloodPuddle: {fileID: 2722766427073212581, guid: 494246666b8620f4f9e2b698642241c6, type: 3}
 --- !u!70 &1070617164029487292
