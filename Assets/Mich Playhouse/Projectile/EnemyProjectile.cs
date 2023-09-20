@@ -52,9 +52,9 @@ public class EnemyProjectile : MonoBehaviour
         // Collision with player
         if (other.gameObject == target)
         {
+            print("player ouchie");
             GameObject.FindObjectOfType<HealthManager>().PlayerOuchie();
             Destroy(gameObject);
-            print("player ouchie");
         }
     }
 }

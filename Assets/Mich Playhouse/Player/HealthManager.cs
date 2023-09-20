@@ -28,9 +28,9 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        playerHealthBar.fillAmount = playerHealth/playerHPstart;
-        ducklingsHealthBar.fillAmount = ducklingsHealth/ducklingsHPstart;
-        mommaHealthBar.fillAmount = mommaHealth/mommaHPstart;
+        //playerHealthBar.fillAmount = playerHealth/playerHPstart;
+        //ducklingsHealthBar.fillAmount = ducklingsHealth/ducklingsHPstart;
+        //mommaHealthBar.fillAmount = mommaHealth/mommaHPstart;
     }
 
     public void PlayerOuchie()

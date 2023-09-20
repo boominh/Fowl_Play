@@ -7,7 +7,7 @@ public class Enemy_02 : MonoBehaviour
     public GameObject projectile;
     public GameObject unblockableProjectile;
 
-    bool fireUnblockable = true;
+    //bool fireUnblockable = true;
 
     float walkDuration = 0.5f;
 
