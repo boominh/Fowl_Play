@@ -8,7 +8,7 @@ public class PlayerFire : MonoBehaviour
     public GameObject reflectPrefab;
 
     float timer;
-    float fireRate = 0.3f;
+    float fireRate = 0.6f;
 
     void Update()
     {
