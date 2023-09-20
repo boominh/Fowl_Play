@@ -7,14 +7,19 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
 
-    int maxEnemies = 6;
+    int wave;
+    int enemySpawnedThisWave;
+    bool spawnNextWave;
+    //int maxEnemies = 6;
     int currentEnemies;
+    int enemiesKilled;
     int numberOfPrefabs;
+    
 
     float width;
     float height;
     float timer;
-    float spawnRate = 1.2f;
+    float spawnRate = 1f;
 
     Vector3 randomSpawnPosition;
 
@@ -30,24 +35,108 @@ public class EnemySpawner : MonoBehaviour
 
     void Update()
     {
-        if (timer > spawnRate && currentEnemies < maxEnemies)
+        //if (currentEnemies == 0)
+        //{
+        //    // Invoke("SpawnNextWave", 1);
+        //}
+
+        // 1 normal enemy
+        if (wave == 1 && spawnNextWave)
         {
-            SpawnEnemy();
-            timer = 0;
-            currentEnemies++;
+            enemySpawnedThisWave = 0;
+            while (enemySpawnedThisWave < 1)
+            {
+                SpawnNormalEnemy();
+                enemySpawnedThisWave++;
+            }
+            wave++;
+            spawnNextWave = false;
         }
+
+        // 3 normal enemies
+        if (wave == 2 && spawnNextWave)
+        {
+            enemySpawnedThisWave = 0;
+            while (enemySpawnedThisWave < 3)
+            {
+                Invoke("SpawnNormalEnemy", spawnRate);
+            }
+            wave++;
+            spawnNextWave = false;
+        }
+
+        // 1 abnormal enemy
+        if (wave == 3 && spawnNextWave) 
+        {
+            enemySpawnedThisWave = 0;
+            while (enemySpawnedThisWave < 1)
+            {
+                Invoke("SpawnAbnormalEnemy", spawnRate);
+            }
+            wave++;
+            spawnNextWave = false;
+        }
+
+        // 2 abnormal enemy
+        if (wave == 4 && spawnNextWave)
+        {
+            enemySpawnedThisWave = 0;
+            while (enemySpawnedThisWave < 2)
+            {
+                Invoke("SpawnAbnormalEnemy", spawnRate);
+            }
+            wave++;
+            spawnNextWave = false;
+        }
+
+        // random spawn
+        if (wave == 5 && spawnNextWave)
+        {
+            if (timer > spawnRate)
+            {
+                SpawnRandomEnemy();
+                timer = 0;
+                currentEnemies++;
+            }
+        }
+
+        if (enemiesKilled >= 30)
+        {
+            wave++;
+            print("Trigger boss fight");
+        }
+
 
         timer += Time.deltaTime;
 
+
+        // Spawn Functions
         randomSpawnPosition = new Vector3(width, Random.Range(-height, height));
 
-        void SpawnEnemy()
+        void SpawnNormalEnemy()
+        {
+            Instantiate(enemyPrefab[1], randomSpawnPosition, transform.rotation);
+            currentEnemies++;
+        }
+
+        void SpawnAbnormalEnemy()
+        {
+            Instantiate(enemyPrefab[0], randomSpawnPosition, transform.rotation);
+            currentEnemies++;
+        }
+
+        void SpawnRandomEnemy()
         {
             Instantiate(enemyPrefab[Random.Range(0, numberOfPrefabs)], randomSpawnPosition, transform.rotation);
+            currentEnemies++;
         }
     }
     public void Enemydied()
     {
         currentEnemies--;
+    }
+    void SpawnNextWave()
+    {
+        spawnNextWave = true;
     }
 }

@@ -3987,7 +3987,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3aaac9c21d2560c49afd00fb6773eccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  enemyPrefab:
+  - {fileID: 508535603414025858, guid: 2d1cb1b6f658b0043a67203295a82615, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
+  - {fileID: 865344337555198784, guid: 34c1d084d3f673b4ab39d5cb3e7f6af4, type: 3}
 --- !u!4 &1604350540
 Transform:
   m_ObjectHideFlags: 0

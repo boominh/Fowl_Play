@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -9074648142493182146}
   - component: {fileID: -8367105369823000256}
   - component: {fileID: 2986346786710741063}
+  - component: {fileID: 3988867553637332153}
   m_Layer: 7
   m_Name: ReflectProjectile
   m_TagString: Reflector
@@ -99,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a6129b58ec0d5648a1c03e7ed7a3548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distanceFromPlayer: 0.75
 --- !u!70 &-8367105369823000256
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,3 +163,24 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!95 &3988867553637332153
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4442607752416685516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 72067cef1c078de46be55168a5bee5dd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

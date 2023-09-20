@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ReflectProjectile : MonoBehaviour
 {
+    float distanceFromPlayer = 0.75f;
     float selfDestructTimer = 0.3f;
     float speed = 2f;
 
@@ -23,13 +24,13 @@ public class ReflectProjectile : MonoBehaviour
     void Update()
     {
         // "Offset" so it no spawn inside player
-        Vector3 direction = Input.mousePosition - Camera.main.WorldToScreenPoint(transform.position);
+        Vector3 direction = Input.mousePosition - Camera.main.WorldToScreenPoint(player.transform.position);
         direction.Normalize();
-        direction *= 0.5f;
+        direction *= distanceFromPlayer;
 
         // Moves forward relative to the player
-        moveForward += transform.right * speed * Time.deltaTime;
-        transform.position = player.position + direction + moveForward;
+        //moveForward += transform.right * speed * Time.deltaTime;
+        transform.position = player.position + direction; //+ moveForward;
         transform.Rotate(0, 0, 1080 * Time.deltaTime);
     }
 }
