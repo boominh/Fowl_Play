@@ -7,17 +7,13 @@ public class MamaSpawner : MonoBehaviour
 
     public GameObject MamaSpawning;
 
-    float mamaFrequency = 5f;
-    float mamaAmplitude = 1f; //Amplitud är ett annat ord för svängningsvidd/omfattning/vidd av mågot, i detta fall svävandet på y axeln - upp och ner.
-                              //vi sätter 0.05 ex för att objektet ska få en finare sväv effekt. 
-    float timer2;
+   
 
     float width;
     float height;
     float timer;
-    float spawnRate = 1.2f;
-    float mamaSpawnX;
-    float mamaSpawnY;
+   
+   
 
     Vector3 mamaSpawnPosition;
 
@@ -58,13 +54,5 @@ public class MamaSpawner : MonoBehaviour
     //{
     //    Instantiate(MamaSpawning, mamaSpawnPosition, transform.rotation);
     //}
-    void MamaBobbing()
-    {
-
-        float pY = Mathf.Sin(timer2 * mamaFrequency) * mamaAmplitude;
-        transform.localPosition = new Vector2(0, pY);
-        timer += Time.deltaTime;
-
-
-    }
+   
 }
