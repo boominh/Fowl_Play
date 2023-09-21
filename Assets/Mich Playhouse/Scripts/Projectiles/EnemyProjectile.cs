@@ -53,7 +53,6 @@ public class EnemyProjectile : MonoBehaviour
         if (other.gameObject == target)
         {
             GameObject.FindObjectOfType<HealthManager>().PlayerOuchie();
-            print("player ouchie");
             Destroy(gameObject);
         }
     }
