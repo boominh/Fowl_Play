@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,8 +137,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f75a93836ecb264439c592c9e998a2cb
-      internalID: 588013956
+      spriteID: 24d4aa6d37f6ba0488e171da0b3c9a97
+      internalID: 257702473
       vertices: []
       indices: 
       edges: []
@@ -158,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84f4be9a86707504ea71b4da0fd2a224
-      internalID: -612958618
+      spriteID: 0351dab9605266743b695ce5c135d2e3
+      internalID: -1336235403
       vertices: []
       indices: 
       edges: []
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0f74cdc96b22e4438f24307eea0441b
-      internalID: 1908984082
+      spriteID: e6080da0e1772b147b09333c981898b1
+      internalID: -1753975846
       vertices: []
       indices: 
       edges: []
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6bd0f182c6799b4bb89bd67dcff0a94
-      internalID: 856169780
+      spriteID: 75303b71b306bda4a94dcede10f7b7ec
+      internalID: -255623805
       vertices: []
       indices: 
       edges: []
@@ -221,8 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f65390b9572be34f92099519f670b5c
-      internalID: -699097774
+      spriteID: 4154fd23677ec804cadb963c5e42a65d
+      internalID: -38389557
       vertices: []
       indices: 
       edges: []
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      duck_canon_0: 588013956
-      duck_canon_1: -612958618
-      duck_canon_2: 1908984082
-      duck_canon_3: 856169780
-      duck_canon_4: -699097774
+      duck_canon_0: 257702473
+      duck_canon_1: -1336235403
+      duck_canon_2: -1753975846
+      duck_canon_3: -255623805
+      duck_canon_4: -38389557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

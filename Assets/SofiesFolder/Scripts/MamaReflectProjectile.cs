@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine.UIElements;
 using UnityEngine;
+using UnityEditor.Overlays;
 
 public class MamaReflectProjectile : MonoBehaviour
 {
     public GameObject mamaReflectProjectile;
-    float projectileSpeed = 15f;
+    float projectileSpeed = 20f;
 
-    float spinSpeed;
+    float spinSpeed = 3 * 360;
     Vector3 direction;
     Vector3 position;
 
@@ -45,6 +46,14 @@ public class MamaReflectProjectile : MonoBehaviour
 
     }
 
-    //mommaOuchie()
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.GetComponent<MamaIsShooting>() != null)
+        {
+            Destroy(gameObject);
+            GameObject.FindObjectOfType<HealthManager>().MommaOuchie();
+
+        }
+    }
     //trigga animation
 }

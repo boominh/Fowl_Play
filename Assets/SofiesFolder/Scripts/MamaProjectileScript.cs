@@ -34,7 +34,7 @@ public class MamaProjectileScript : MonoBehaviour
     {
 
         
-        gameObject.transform.position += bulletDirection * bulletSpeed * Time.deltaTime; // 
+        gameObject.transform.position += bulletDirection * bulletSpeed * Time.deltaTime; 
         gameObject.transform.Rotate(0, 0, 360 * Time.deltaTime);
 
         // Destroys projectile if out of frame
@@ -59,7 +59,6 @@ public class MamaProjectileScript : MonoBehaviour
         {
             GameObject.FindObjectOfType<HealthManager>().PlayerOuchie();
             Destroy(gameObject);
-            
         }
 
 
