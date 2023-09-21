@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: R_corner
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -100051603, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
+  - {fileID: -312571852, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
+  - {fileID: -1100016966, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
+  - {fileID: 630039374, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
+  - {fileID: -3812097, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
+  - {fileID: 1725102533, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
+  - {fileID: 128715865, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
+  - {fileID: 1963361850, guid: 7f46e245ef4fb434db8ce61c8d8c1913, type: 3}
   m_MinSpeed: 8
   m_MaxSpeed: 8
   m_AnimationStartTime: 0

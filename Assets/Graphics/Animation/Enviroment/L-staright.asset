@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: L-staright
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -1684493025, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -1886094131, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -680599274, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -1975245638, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -1822238685, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: 310568544, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -193668510, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: 2087323685, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
   m_MinSpeed: 8
   m_MaxSpeed: 8
   m_AnimationStartTime: 0

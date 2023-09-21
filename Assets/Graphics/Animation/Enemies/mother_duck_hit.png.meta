@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e4a4972ee93dc844da34a641934a5100
+guid: a64dfc13541f5774daa5e30f8ec85b50
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: duck_canon_0
+      name: mother_duck_hit_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 48
-        height: 16
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f75a93836ecb264439c592c9e998a2cb
-      internalID: 588013956
+      spriteID: dcc8a949f93aad54084ec6cfa0cbfd74
+      internalID: 875586412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duck_canon_1
+      name: mother_duck_hit_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 16
-        width: 48
-        height: 16
+        x: 32
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84f4be9a86707504ea71b4da0fd2a224
-      internalID: -612958618
+      spriteID: 6c6457f3332c27649b8af2aa9fc2027f
+      internalID: 1124226649
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duck_canon_2
+      name: mother_duck_hit_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2139d9920071bd846a3243a685a2dbed
+      internalID: -2136016084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mother_duck_hit_3
       rect:
         serializedVersion: 2
         x: 96
-        y: 16
-        width: 48
-        height: 16
+        y: 0
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0f74cdc96b22e4438f24307eea0441b
-      internalID: 1908984082
+      spriteID: 388968d675e13c24ab1e2a98a89d6a66
+      internalID: -1609207032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: duck_canon_3
+      name: mother_duck_hit_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 128
         y: 0
-        width: 48
-        height: 16
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,29 +221,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6bd0f182c6799b4bb89bd67dcff0a94
-      internalID: 856169780
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: duck_canon_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 48
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f65390b9572be34f92099519f670b5c
-      internalID: -699097774
+      spriteID: bf78da24d2b996c47ab6d8a85ba915c2
+      internalID: -964530468
       vertices: []
       indices: 
       edges: []
@@ -238,11 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      duck_canon_0: 588013956
-      duck_canon_1: -612958618
-      duck_canon_2: 1908984082
-      duck_canon_3: 856169780
-      duck_canon_4: -699097774
+      mother_duck_hit_0: 875586412
+      mother_duck_hit_1: 1124226649
+      mother_duck_hit_2: -2136016084
+      mother_duck_hit_3: -1609207032
+      mother_duck_hit_4: -964530468
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
