@@ -55,5 +55,4 @@ public class MamaReflectProjectile : MonoBehaviour
 
         }
     }
-    //trigga animation
 }

@@ -17,6 +17,8 @@ public class HealthManager : MonoBehaviour
     public Image ducklingsHealthBar;
     public Image mommaHealthBar;
 
+    public GameObject mamaExplosion;
+
     SceneHandler sceneHandler;
     PlayerAnimations playerAnimations;
     PlayerSound playerSound;
@@ -62,10 +64,27 @@ public class HealthManager : MonoBehaviour
     {
         mommaHealth -= 1;
         mamaAnimations.PlayMamaOuchie();
-        //GameObject.FindObjectOfType<MamaIsShooting>().AddMP();
+        playerSound.PlayPlayerHitSound();
+       
+        GameObject.FindObjectOfType<MamaIsShooting>().AddMP();
+
+        if (mommaHealth <= 8)
+        {
+            GameObject.FindObjectOfType<MamaIsShooting>().AddMP();
+        }
+
         if (mommaHealth <= 0)
         {
-            sceneHandler.LoadVictoryScreen();
+            GameObject mama = GameObject.FindGameObjectWithTag("Mama");
+            Instantiate(mamaExplosion, mama.transform.position, mama.transform.rotation);
+            mama.SetActive(false);
+
+            Invoke("DelayLoadingScreen", 3f);
         }
+    }
+
+    void DelayLoadingScreen()
+    {
+        sceneHandler.LoadVictoryScreen();
     }
 }
