@@ -30,6 +30,6 @@ public class ReflectProjectile : MonoBehaviour
         // Moves forward relative to the player
         //moveForward += transform.right * speed * Time.deltaTime;
         transform.position = player.position + direction; //+ moveForward;
-        transform.Rotate(0, 0, 1080 * Time.deltaTime);
+        transform.Rotate(0, 0, -(3*360) * Time.deltaTime);
     }
 }
