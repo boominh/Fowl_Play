@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public GameObject projectile;
+    Animator animator;
 
     float walkDuration;
 
@@ -47,6 +48,7 @@ public class Enemy : MonoBehaviour
             fireTimer = 0;
             Instantiate(projectile, transform.position, transform.rotation);
             fireRate = Random.Range(2, 4);
+            animator.SetTrigger("attakk");
         }
 
         // Make walk to position
