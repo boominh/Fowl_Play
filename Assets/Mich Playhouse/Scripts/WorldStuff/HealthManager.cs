@@ -45,7 +45,7 @@ public class HealthManager : MonoBehaviour
 
         if (playerHealth <= 0)
         {
-            GameObject.FindObjectOfType<SceneHandler>().LoadLoseScreen();
+            //GameObject.FindObjectOfType<SceneHandler>().LoadLoseScreen();
         }
     }
 
@@ -60,6 +60,7 @@ public class HealthManager : MonoBehaviour
     public void MommaOuchie()
     {
         mommaHealth -= 1;
+        GameObject.FindObjectOfType<MamaIsShooting>().AddMP();
         if (mommaHealth <= 0)
         {
             //whatever happens when die
