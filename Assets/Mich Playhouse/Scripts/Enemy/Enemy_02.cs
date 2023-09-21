@@ -6,6 +6,8 @@ public class Enemy_02 : MonoBehaviour
 {
     public GameObject projectile;
     public GameObject unblockableProjectile;
+    
+    Animator animator;
 
     //bool fireUnblockable = true;
 
@@ -41,14 +43,18 @@ public class Enemy_02 : MonoBehaviour
 
         //randomize
         walkDuration = Random.Range(0.5f, 1f);
+
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
         //Fire with fire rate
         if (fireTimer > fireRate && startBlasting)
         {
+            animator.Play("duck2_attack");
             fireTimer = 0;
             fireRate = Random.Range(2, 4);
+
 
             if (Random.Range(0, 3) == 0)
             {

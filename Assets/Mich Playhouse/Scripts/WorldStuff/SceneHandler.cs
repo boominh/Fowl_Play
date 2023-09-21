@@ -24,4 +24,8 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("LoseScreen");
     }
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
