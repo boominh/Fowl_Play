@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
+    int checkPoint = 0;
     public void PlayGame()
     {
         SceneManager.LoadScene("Intro");
@@ -20,6 +21,7 @@ public class SceneHandler : MonoBehaviour
     public void PlayBossFight()
     {
         SceneManager.LoadScene("BossFight");
+        checkPoint = 1;
     }
     public void LoadVictoryScreen()
     {
@@ -29,9 +31,21 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("LoseScreen");
     }
+    public void LoadCheckPoint()
+    {
+        if (checkPoint == 0)
+        {
+            LoadGame();
+        }
+        if (checkPoint == 1)
+        {
+            LoadPreBoss();
+        }
+    }
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        checkPoint = 0;
     }
     public void QuitGame()
     {

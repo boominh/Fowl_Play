@@ -5731,6 +5731,7 @@ MonoBehaviour:
   playerHealthBar: {fileID: 589933723}
   ducklingsHealthBar: {fileID: 450806371}
   mommaHealthBar: {fileID: 450806371}
+  mamaExplosion: {fileID: 262593735743298216, guid: 22959463a1d97aa4ba71e4c41a5d9152, type: 3}
 --- !u!4 &1248601115
 Transform:
   m_ObjectHideFlags: 0
@@ -9065,7 +9066,7 @@ SceneRoots:
   - {fileID: 1248601115}
   - {fileID: 1487950748}
   - {fileID: 1916752030}
-  - {fileID: 241112113}
   - {fileID: 376931317}
   - {fileID: 855359956}
   - {fileID: 364893994}
+  - {fileID: 241112113}

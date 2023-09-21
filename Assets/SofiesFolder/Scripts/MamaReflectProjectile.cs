@@ -50,8 +50,8 @@ public class MamaReflectProjectile : MonoBehaviour
     {
         if (other.gameObject.GetComponent<MamaIsShooting>() != null)
         {
-            Destroy(gameObject);
             GameObject.FindObjectOfType<HealthManager>().MommaOuchie();
+            Destroy(gameObject);
 
         }
     }

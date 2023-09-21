@@ -4234,6 +4234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mama_duck
       objectReference: {fileID: 0}
+    - target: {fileID: 8222780733429701752, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
+      propertyPath: m_TagString
+      value: Mama
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 17522023006195244, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
     m_RemovedGameObjects:
@@ -6766,7 +6770,7 @@ GameObject:
   - component: {fileID: 1379081558}
   m_Layer: 0
   m_Name: HealthManager
-  m_TagString: Untagged
+  m_TagString: Mama
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
