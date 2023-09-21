@@ -43,7 +43,7 @@ public class HealthManager : MonoBehaviour
 
         print(playerHealth);
 
-        if (playerHealth == 0); 
+        if (playerHealth <= 0)
         {
             GameObject.FindObjectOfType<SceneHandler>().LoadLoseScreen();
         }

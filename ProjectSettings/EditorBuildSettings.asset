@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossFight.unity
     guid: c93cd51c9c1cfc94a8c417334ad5e88e
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 07cc8b03aef37d642a653c34b951c934
   m_configObjects: {}
