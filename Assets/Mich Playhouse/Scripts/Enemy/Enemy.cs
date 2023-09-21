@@ -39,6 +39,8 @@ public class Enemy : MonoBehaviour
 
         //randomize
         walkDuration = Random.Range(0.5f, 1f);
+        
+        animator = GetComponent<Animator>();
     }
     void Update()
     {
@@ -48,7 +50,8 @@ public class Enemy : MonoBehaviour
             fireTimer = 0;
             Instantiate(projectile, transform.position, transform.rotation);
             fireRate = Random.Range(2, 4);
-            animator.SetTrigger("attakk");
+            print("enemy attack");
+            animator.Play("duck_attack");
         }
 
         // Make walk to position

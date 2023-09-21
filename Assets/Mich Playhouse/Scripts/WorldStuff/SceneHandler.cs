@@ -7,6 +7,11 @@ public class SceneHandler : MonoBehaviour
 {
     public void PlayGame()
     {
+        SceneManager.LoadScene("Intro");
+    }
+
+    public void LoadGame()
+    {
         SceneManager.LoadScene("MainScene");
     }
 
@@ -18,5 +23,9 @@ public class SceneHandler : MonoBehaviour
     public void LoadLoseScreen()
     {
         SceneManager.LoadScene("LoseScreen");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
