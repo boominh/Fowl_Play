@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: R_straight
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: -2095031188, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -1036483649, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -1939282052, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -1359872401, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: 1414023164, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: -37841025, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: 884612190, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
+  - {fileID: 1660427593, guid: 82f92c8c18b918b499f8e1bf98e48aa8, type: 3}
   m_MinSpeed: 8
   m_MaxSpeed: 8
   m_AnimationStartTime: 0

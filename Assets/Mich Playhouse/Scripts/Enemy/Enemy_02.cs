@@ -48,7 +48,7 @@ public class Enemy_02 : MonoBehaviour
         if (fireTimer > fireRate && startBlasting)
         {
             fireTimer = 0;
-            fireRate = Random.Range(2, 6);
+            fireRate = Random.Range(2, 4);
 
             if (Random.Range(0, 3) == 0)
             {

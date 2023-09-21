@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthManager : MonoBehaviour
 {
     float playerHealth = 3;
-    float ducklingsHealth = 15;
+    float ducklingsHealth = 20;
     float mommaHealth = 15;
 
     float playerHPstart;
@@ -31,8 +31,8 @@ public class HealthManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //playerHealthBar.fillAmount = playerHealth/playerHPstart;
-        //ducklingsHealthBar.fillAmount = ducklingsHealth/ducklingsHPstart;
+        playerHealthBar.fillAmount = playerHealth/playerHPstart;
+        ducklingsHealthBar.fillAmount = ducklingsHealth/ducklingsHPstart + 0.1f;
         //mommaHealthBar.fillAmount = mommaHealth/mommaHPstart;
     }
 
@@ -52,10 +52,7 @@ public class HealthManager : MonoBehaviour
     public void DucklingOuchie()
     { 
         ducklingsHealth -= 1;
-        if (ducklingsHealth <= 0)
-        {
-            //whatever happens when die
-        }
+        print(ducklingsHealth);
     }
     public void MommaOuchie()
     {
