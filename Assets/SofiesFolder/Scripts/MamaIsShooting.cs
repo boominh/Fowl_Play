@@ -57,7 +57,7 @@ public class MamaIsShooting : MonoBehaviour
         mamaEndPosition.y = 0f;
         mamaEndPosition = new Vector3(mamaEndPosition.x, mamaEndPosition.y, 0);
 
-        mamaWalkTime = 0f;
+        mamaWalkTime = 5f;
 
         animator = GetComponent<Animator>();
 

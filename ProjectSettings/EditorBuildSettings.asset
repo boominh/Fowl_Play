@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainScene.unity
     guid: 564abf409fee53d4b8253a18a8b8d9a8
   - enabled: 1
+    path: Assets/Scenes/LoadBossFight.unity
+    guid: 8cca371c58f54034ea88cf7cd249e1f6
+  - enabled: 1
     path: Assets/Scenes/BossFight.unity
     guid: c93cd51c9c1cfc94a8c417334ad5e88e
   - enabled: 1
