@@ -96,6 +96,7 @@ public class EnemySpawner : MonoBehaviour
         {
             wave++;
             print("Trigger boss fight");
+            GameObject.FindObjectOfType<SceneHandler>().PlayBossFight();
         }
 
 

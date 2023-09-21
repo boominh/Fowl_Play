@@ -6,9 +6,15 @@ using UnityEngine;
 public class PlayerFire : MonoBehaviour
 {
     public GameObject reflectPrefab;
+    PlayerAnimations playerAnimation;
 
     float timer;
     float fireRate = 0.6f;
+
+    void Start()
+    {
+        playerAnimation = GameObject.FindObjectOfType<PlayerAnimations>();
+    }
 
     void Update()
     {
@@ -22,6 +28,7 @@ public class PlayerFire : MonoBehaviour
             fire();
             transform.up = Vector2.up;
             timer = 0;
+            playerAnimation.Parry();
         }
 
         timer += Time.deltaTime;

@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class PlayerAnimations: MonoBehaviour
 {
-    // Start is called before the first frame update
+    Animator animator;
+    string currentState;
+
     void Start()
     {
-        
+        animator = GetComponent<Animator>();
+        animator.Play("Idle");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Parry()
     {
-        
+        animator.Play("parry");
+        //ChangeAnimationState("parry");
+    }
+    public void Idle()
+    {
+        ChangeAnimationState("Idle");
+    }
+    public void TakeDamage()
+    {
+        ChangeAnimationState("Take_DMG");
+    }
+    void ChangeAnimationState(string newState)
+    {
+        if (currentState == newState) return;
+
+        animator.Play(newState);
+
+        currentState = newState;
     }
 }

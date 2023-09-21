@@ -21,4 +21,9 @@ public class SceneHandler : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
+
+    public void PlayBossFight()
+    {
+        SceneManager.LoadScene("BossFight");
+    }
 }
