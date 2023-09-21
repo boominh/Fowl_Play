@@ -28,7 +28,8 @@ public class PlayerFire : MonoBehaviour
             fire();
             transform.up = Vector2.up;
             timer = 0;
-            playerAnimation.Parry();
+
+            playerAnimation.PlayerReflectAnim();
         }
 
         timer += Time.deltaTime;

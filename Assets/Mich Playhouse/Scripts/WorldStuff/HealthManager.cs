@@ -17,12 +17,15 @@ public class HealthManager : MonoBehaviour
     public Image ducklingsHealthBar;
     public Image mommaHealthBar;
 
+    PlayerAnimations playerAnimations;
 
     void Start()
     {
         playerHPstart = playerHealth;
         ducklingsHPstart = ducklingsHealth;
         mommaHPstart = mommaHealth;
+
+        playerAnimations = FindObjectOfType<PlayerAnimations>();
     }
 
     // Update is called once per frame
@@ -36,10 +39,14 @@ public class HealthManager : MonoBehaviour
     public void PlayerOuchie()
     {
         playerHealth -= 1;
-        //if (playerHealth <= 0) 
-        //{
-            
-        //}
+        playerAnimations.PlayerOuchieAnim();
+
+        print(playerHealth);
+
+        if (playerHealth == 0); 
+        {
+            GameObject.FindObjectOfType<SceneHandler>().LoadLoseScreen();
+        }
     }
 
     public void DucklingOuchie()

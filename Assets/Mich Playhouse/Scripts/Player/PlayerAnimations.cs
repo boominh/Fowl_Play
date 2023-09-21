@@ -5,33 +5,35 @@ using UnityEngine;
 public class PlayerAnimations: MonoBehaviour
 {
     Animator animator;
-    string currentState;
+    //string currentState;
 
     void Start()
     {
         animator = GetComponent<Animator>();
-        animator.Play("Idle");
     }
 
-    public void Parry()
+    public void PlayerReflectAnim()
     {
         animator.Play("parry");
         //ChangeAnimationState("parry");
     }
-    public void Idle()
+    public void IdleAnim()
     {
-        ChangeAnimationState("Idle");
+        animator.Play("Idle");
+        //ChangeAnimationState("Idle");
     }
-    public void TakeDamage()
+    public void PlayerOuchieAnim()
     {
-        ChangeAnimationState("Take_DMG");
+        animator.SetTrigger("ouchie");
     }
-    void ChangeAnimationState(string newState)
-    {
-        if (currentState == newState) return;
 
-        animator.Play(newState);
 
-        currentState = newState;
-    }
+    //void ChangeAnimationState(string newState)
+    //{
+    //    //if (currentState == newState) return;
+
+    //    animator.Play(newState);
+
+    //    //currentState = newState;
+    //}
 }
