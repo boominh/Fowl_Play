@@ -18,7 +18,7 @@ public class MamaIsShooting : MonoBehaviour
     float timer;
     float timeDelay = 0;
 
-    int MP; // MP = MovePattern
+    int MP = 1; // MP = MovePattern
 
 
     float width;
@@ -57,7 +57,7 @@ public class MamaIsShooting : MonoBehaviour
         mamaEndPosition.y = 0f;
         mamaEndPosition = new Vector3(mamaEndPosition.x, mamaEndPosition.y, 0);
 
-        mamaWalkTime = 5f;
+        mamaWalkTime = 3.5f;
 
         animator = GetComponent<Animator>();
 

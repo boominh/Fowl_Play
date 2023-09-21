@@ -14,7 +14,12 @@ public class IntroTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer = Time.deltaTime;
+        timer += Time.deltaTime;
+
+        if (Input.GetKeyUp(KeyCode.Space)) 
+        {
+            GameObject.FindObjectOfType<SceneHandler>().LoadGame();
+        }
 
         if (timer > 29 ) 
         {

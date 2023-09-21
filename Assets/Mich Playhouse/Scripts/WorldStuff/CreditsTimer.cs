@@ -14,7 +14,7 @@ public class CreditsTimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer = Time.deltaTime;
+        timer += Time.deltaTime;
 
         if (timer > 30)
         {

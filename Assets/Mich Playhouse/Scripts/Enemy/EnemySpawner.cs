@@ -95,7 +95,6 @@ public class EnemySpawner : MonoBehaviour
         if (enemiesKilled >= 20)
         {
             wave++;
-            print("Trigger boss fight");
             GameObject.FindObjectOfType<SceneHandler>().LoadPreBoss();
         }
 

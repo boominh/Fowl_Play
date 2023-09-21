@@ -5730,7 +5730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealthBar: {fileID: 589933723}
   ducklingsHealthBar: {fileID: 450806371}
-  mommaHealthBar: {fileID: 450806371}
+  mommaHealthBar: {fileID: 1190503601}
   mamaExplosion: {fileID: 262593735743298216, guid: 22959463a1d97aa4ba71e4c41a5d9152, type: 3}
 --- !u!4 &1248601115
 Transform:

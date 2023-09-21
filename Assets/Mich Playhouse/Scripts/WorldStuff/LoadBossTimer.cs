@@ -14,9 +14,13 @@ public class LoadBosstimer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer = Time.deltaTime;
+        timer += Time.deltaTime;
 
-        if (timer > 6)
+        if (Input.GetKey(KeyCode.Space))
+        {
+            GameObject.FindObjectOfType<SceneHandler>().PlayBossFight();
+        }
+        if (timer > 5)
         {
             GameObject.FindObjectOfType<SceneHandler>().PlayBossFight();
         }

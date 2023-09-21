@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class SceneHandler : MonoBehaviour
 {
-    int checkPoint = 0;
     public void PlayGame()
     {
         SceneManager.LoadScene("Intro");
@@ -17,11 +16,12 @@ public class SceneHandler : MonoBehaviour
     public void LoadPreBoss()
     {
         SceneManager.LoadScene("LoadBossFight");
+        PlayerPrefs.SetInt("checkpoint", 1);
     }
     public void PlayBossFight()
     {
         SceneManager.LoadScene("BossFight");
-        checkPoint = 1;
+        PlayerPrefs.SetInt("checkpoint", 1);
     }
     public void LoadVictoryScreen()
     {
@@ -33,11 +33,11 @@ public class SceneHandler : MonoBehaviour
     }
     public void LoadCheckPoint()
     {
-        if (checkPoint == 0)
+        if (PlayerPrefs.GetInt("checkpoint") == 0)
         {
             LoadGame();
         }
-        if (checkPoint == 1)
+        if (PlayerPrefs.GetInt("checkpoint") == 1)
         {
             LoadPreBoss();
         }
@@ -45,10 +45,18 @@ public class SceneHandler : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
-        checkPoint = 0;
+        PlayerPrefs.SetInt("checkpoint", 0);
     }
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            LoadMainMenu();
+        }
     }
 }
