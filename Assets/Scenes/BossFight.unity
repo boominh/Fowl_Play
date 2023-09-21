@@ -749,9 +749,9 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!1 &324953847 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8222780733429701752, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
+--- !u!4 &324953851 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7468173885042516566, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
   m_PrefabInstance: {fileID: 514125217}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &514125217
@@ -773,7 +773,7 @@ PrefabInstance:
     - target: {fileID: 17522023006195244, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
       propertyPath: ProjectileMama
       value: 
-      objectReference: {fileID: 324953847}
+      objectReference: {fileID: 8345516409532672774, guid: 00066551617ada849889941260fe0d67, type: 3}
     - target: {fileID: 7468173885042516566, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.97
@@ -821,7 +821,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 776711400983459725, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7468173885042516566, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 241889923}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddd7c528d2cb50a4794f054413695861, type: 3}
 --- !u!1001 &556315594
@@ -1497,15 +1500,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 324953851}
     m_Modifications:
     - target: {fileID: 1707764344966898573, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.069155
+      value: -0.9008455
       objectReference: {fileID: 0}
     - target: {fileID: 1707764344966898573, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47640678
+      value: 0.17640677
       objectReference: {fileID: 0}
     - target: {fileID: 1707764344966898573, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1517,15 +1520,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1707764344966898573, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1707764344966898573, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1707764344966898573, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1707764344966898573, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1543,7 +1546,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: bulletPoint
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9011812420256924597, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
+      propertyPath: reflectEDProjectile
+      value: 
+      objectReference: {fileID: 8345516409532672774, guid: 00066551617ada849889941260fe0d67, type: 3}
+    m_RemovedComponents:
+    - {fileID: 1237770097045129489, guid: 03f8b3d712dae554695ac1b3b4cec398, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5315,4 +5323,3 @@ SceneRoots:
   - {fileID: 1379081559}
   - {fileID: 703969393}
   - {fileID: 514125217}
-  - {fileID: 809617492}
