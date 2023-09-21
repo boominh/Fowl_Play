@@ -69,6 +69,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1892241170584747343, guid: 4ccca0cbbe468ad4db2e26b1f1e0ec2c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6076982323783543473}
+    - targetCorrespondingSourceObject: {fileID: 1892241170584747343, guid: 4ccca0cbbe468ad4db2e26b1f1e0ec2c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -8048893501093217302}
   m_SourcePrefab: {fileID: 100100000, guid: 4ccca0cbbe468ad4db2e26b1f1e0ec2c, type: 3}
 --- !u!1 &8345516409532672774 stripped
 GameObject:
@@ -82,9 +85,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8345516409532672774}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ba2ebbb64857aa54e89429603aa3bd38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   reflectEDProjectile: {fileID: 7456419601272678882, guid: 17e9b8313d89bce4fa9deb5fe6c7f024, type: 3}
+--- !u!114 &-8048893501093217302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8345516409532672774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1805a8777a3a597498a2f7ea2c80cb28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 8
+  reflectEDProjectile: {fileID: 7456419601272678882, guid: 17e9b8313d89bce4fa9deb5fe6c7f024, type: 3}
+  reflectParticles: {fileID: 5815900961942775705, guid: fb3849c010126e34393fdeefa163a067, type: 3}

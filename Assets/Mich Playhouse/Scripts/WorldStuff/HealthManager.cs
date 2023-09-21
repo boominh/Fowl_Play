@@ -33,7 +33,7 @@ public class HealthManager : MonoBehaviour
     {
         playerHealthBar.fillAmount = playerHealth/playerHPstart;
         ducklingsHealthBar.fillAmount = ducklingsHealth/ducklingsHPstart + 0.1f;
-        //mommaHealthBar.fillAmount = mommaHealth/mommaHPstart;
+        mommaHealthBar.fillAmount = mommaHealth/mommaHPstart;
     }
 
     public void PlayerOuchie()
