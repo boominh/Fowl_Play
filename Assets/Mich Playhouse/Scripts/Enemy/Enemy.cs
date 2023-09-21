@@ -50,7 +50,6 @@ public class Enemy : MonoBehaviour
             fireTimer = 0;
             Instantiate(projectile, transform.position, transform.rotation);
             fireRate = Random.Range(2, 4);
-            print("enemy attack");
             animator.Play("duck_attack");
         }
 

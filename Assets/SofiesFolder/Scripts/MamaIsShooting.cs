@@ -7,6 +7,8 @@ public class MamaIsShooting : MonoBehaviour
 
     public GameObject ProjectileMama;
 
+    Animator animator;
+
 
     float mamaFrequency = 3f;
     float mamaAmplitudeX = 1f;
@@ -56,6 +58,8 @@ public class MamaIsShooting : MonoBehaviour
         mamaEndPosition = new Vector3(mamaEndPosition.x, mamaEndPosition.y, 0);
 
         mamaWalkTime = 0f;
+
+        animator = GetComponent<Animator>();
 
     }
 
@@ -146,8 +150,6 @@ public class MamaIsShooting : MonoBehaviour
 
             if (timeDelay > 1f && MP == 4)
             {
-
-
                 float posY = Mathf.Cos(timer * mamaFrequency) * mamaAmplitude;
                 float posX = -Mathf.Cos(timer * mamaFrequency) * mamaAmplitudeX;
                 posX += mamaEndPosition.x;
@@ -167,16 +169,17 @@ public class MamaIsShooting : MonoBehaviour
             // tranform.rotation = rotation. 
             //Rigidbody2D projectile = ProjectileMama.GetComponent<Rigidbody2D>();
             //projectile.velocity = bulletPoint.up * fireRate;
-
-
         }
-
-
     }
     public void AddMP()
     {
         MP++;
         MP = MP % 5;
+    }
+
+    public void PlayMamaOuchie()
+    {
+        animator.SetTrigger("ouchie");
     }
 }
 
