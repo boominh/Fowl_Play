@@ -1,2 +1,2 @@
-# Terminator_Duckling
+# Fowl Play - Revenge of The Ugly Duckling
 wikked game jam
