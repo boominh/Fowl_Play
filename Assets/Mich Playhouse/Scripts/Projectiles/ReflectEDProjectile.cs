@@ -55,6 +55,7 @@ public class ReflectEDProjectile : MonoBehaviour
             Invoke("MakePuddle", 0.4f);
             
             FindObjectOfType<EnemySpawner>().Enemydied();
+            FindObjectOfType<HealthManager>().DucklingOuchie();
 
             gameObject.SetActive(false);
         }
