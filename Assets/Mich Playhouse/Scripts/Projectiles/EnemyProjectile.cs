@@ -11,6 +11,7 @@ public class EnemyProjectile : MonoBehaviour
     public float projectileSpeed;
 
     public GameObject reflectEDProjectile;
+    public GameObject reflectParticles;
 
     GameObject target;
     Vector3 direction;
@@ -46,7 +47,9 @@ public class EnemyProjectile : MonoBehaviour
         if (other.gameObject.GetComponent<ReflectProjectile>() != null)
         {
             Instantiate(reflectEDProjectile, transform.position, Quaternion.identity);
+            Instantiate(reflectParticles, transform.position, Quaternion.identity);
             Destroy(gameObject);
+
         }
 
         // Collision with player

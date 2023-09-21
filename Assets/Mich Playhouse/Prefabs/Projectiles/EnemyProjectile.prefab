@@ -135,3 +135,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 6
   reflectEDProjectile: {fileID: 6435438821315269462, guid: 2a15c31bc9ff80641aee4b619133920a, type: 3}
+  reflectParticles: {fileID: 5815900961942775705, guid: fb3849c010126e34393fdeefa163a067, type: 3}

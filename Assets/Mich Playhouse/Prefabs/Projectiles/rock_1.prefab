@@ -100,6 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 8
   reflectEDProjectile: {fileID: 8629076948731809142, guid: d34533ef9d2bc6445b1220890b97be8f, type: 3}
+  reflectParticles: {fileID: 5815900961942775705, guid: fb3849c010126e34393fdeefa163a067, type: 3}
 --- !u!58 &1175430460910388330
 CircleCollider2D:
   m_ObjectHideFlags: 0
