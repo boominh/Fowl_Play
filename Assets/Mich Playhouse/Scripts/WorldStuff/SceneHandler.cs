@@ -7,6 +7,11 @@ public class SceneHandler : MonoBehaviour
 {
     public void PlayGame()
     {
+        SceneManager.LoadScene("Intro");
+    }
+
+    public void LoadGame()
+    {
         SceneManager.LoadScene("MainScene");
     }
 
