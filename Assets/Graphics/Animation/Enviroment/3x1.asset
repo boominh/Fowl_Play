@@ -12,9 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
   m_Name: 3x1
   m_EditorClassIdentifier: 
-  m_AnimatedSprites: []
-  m_MinSpeed: 1
-  m_MaxSpeed: 1
+  m_AnimatedSprites:
+  - {fileID: 51482086, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  - {fileID: 1869358024, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  - {fileID: 1325068472, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  - {fileID: 248112336, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  - {fileID: 667161708, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  - {fileID: 1247892640, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  - {fileID: -1037472670, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  - {fileID: -1529237379, guid: 2dea97e25214bb246a637c30f4b38efd, type: 3}
+  m_MinSpeed: 8
+  m_MaxSpeed: 8
   m_AnimationStartTime: 0
   m_AnimationStartFrame: 0
   m_TileColliderType: 0
