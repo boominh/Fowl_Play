@@ -58,5 +58,9 @@ public class SceneHandler : MonoBehaviour
         {
             LoadMainMenu();
         }
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            QuitGame();
+        }
     }
 }
