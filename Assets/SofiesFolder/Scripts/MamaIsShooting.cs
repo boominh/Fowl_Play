@@ -162,7 +162,7 @@ public class MamaIsShooting : MonoBehaviour
 
         void MamaShooting()
         {
-            fireRate = Random.Range(0.5f, 1.5f);
+
             Instantiate(ProjectileMama, bulletPoint.position, transform.rotation); // instantierar projctilen hos mama, bulletPoint = startpositionen på maman/objektet där skottet ska ut.
             fireTimer = 0;
 
