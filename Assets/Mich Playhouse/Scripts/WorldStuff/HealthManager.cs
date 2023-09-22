@@ -77,7 +77,7 @@ public class HealthManager : MonoBehaviour
         if (mommaHealth <= 0)
         {
             Instantiate(mamaExplosion, mama.transform.position, mama.transform.rotation);
-            mama.SetActive(false);
+            Destroy(mama);
 
             Invoke("DelayLoadingScreen", 2f);
         }
