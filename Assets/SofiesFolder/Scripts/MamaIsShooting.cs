@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MamaFire : MonoBehaviour
+public class MamaIsShooting : MonoBehaviour
 {
 
     public GameObject ProjectileMama;
@@ -27,6 +27,9 @@ public class MamaFire : MonoBehaviour
     float fireTimer;
     float fireRate = 1.5f;
     public Transform bulletPoint;
+
+    //float x;
+    //float y;
 
     float mamaWalkTime;
     float mamaWalkTimer;
